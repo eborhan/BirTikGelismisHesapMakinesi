@@ -41,6 +41,16 @@ public class BirTikGelismisHesapMakinesi {
         return result;
     }
 
+    static void factorial(int a) {
+        int result = 1;
+        for (int i = 1; i <= a; i++) {
+            result *= i;
+        }
+
+        System.out.println("Girilen ilk sayının faktöryeli : " + result);
+
+    }
+
     static int mode(int a, int b) {
         return a % b;
     }
@@ -62,9 +72,10 @@ public class BirTikGelismisHesapMakinesi {
                 + "3 - Çarpma İşlemi\n"
                 + "4 - Bölme İşlemi\n"
                 + "5 - Sayının Üssünü Alma\n"
-                + "6 - Mod Alma\n"
-                + "7 - Dikdörtgen Alan ve Çevre Hesapmala\n"
-                + "0 - Çıkış Yap";
+                + "6 - Faktöryel Hesaplama\n"
+                + "7 - Mod Alma\n"
+                + "8 - Dikdörtgen Alan ve Çevre Hesapmala\n"
+                + "0 - Çıkış";
 
 
         while (true) {
@@ -97,9 +108,12 @@ public class BirTikGelismisHesapMakinesi {
                     System.out.println("üslü sayı: " + power(a, b));
                     break;
                 case 6:
-                    System.out.println("Mod işlemi: " + mode(a, b));
+                    factorial(a);
                     break;
                 case 7:
+                    System.out.println("Mod işlemi: " + mode(a, b));
+                    break;
+                case 8:
                     rectangle(a, b);
                     break;
                 default:
